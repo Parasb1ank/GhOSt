@@ -1,0 +1,9 @@
+[unstable]
+build-std = ["core","compiler_builtins"] # To recompile these libraries
+build-std-features = ["compiler-builtins-mem"] #enables the mem feature of the compiler_builtins crate.
+
+[build]
+target = "x86_64-GhOSt.json"
+
+[target.'cfg(target_os = "none")']
+runner = "bootimage runner"
